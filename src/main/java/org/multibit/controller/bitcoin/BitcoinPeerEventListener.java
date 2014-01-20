@@ -8,12 +8,12 @@ import org.multibit.viewsystem.swing.view.panels.SendBitcoinConfirmPanel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.google.bitcoin.core.Block;
-import com.google.bitcoin.core.GetDataMessage;
-import com.google.bitcoin.core.Message;
-import com.google.bitcoin.core.Peer;
-import com.google.bitcoin.core.PeerEventListener;
-import com.google.bitcoin.core.Transaction;
+import com.google.fastcoin.core.Block;
+import com.google.fastcoin.core.GetDataMessage;
+import com.google.fastcoin.core.Message;
+import com.google.fastcoin.core.Peer;
+import com.google.fastcoin.core.PeerEventListener;
+import com.google.fastcoin.core.Transaction;
 
 public class BitcoinPeerEventListener implements PeerEventListener {
 

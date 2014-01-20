@@ -39,10 +39,10 @@ import org.multibit.exchange.CurrencyConverter;
 import org.multibit.exchange.CurrencyConverterResult;
 import org.multibit.model.bitcoin.BitcoinModel;
 
-import com.google.bitcoin.core.Address;
-import com.google.bitcoin.core.AddressFormatException;
-import com.google.bitcoin.core.Utils;
-import com.google.bitcoin.uri.BitcoinURI;
+import com.google.fastcoin.core.Address;
+import com.google.fastcoin.core.AddressFormatException;
+import com.google.fastcoin.core.Utils;
+import com.google.fastcoin.uri.FastcoinURI;
 import com.google.zxing.WriterException;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 import com.google.zxing.qrcode.encoder.ByteMatrix;
@@ -99,11 +99,11 @@ public class QRCodeGenerator {
                 if (amount != null && !"".equals(amount)) {
                     CurrencyConverterResult converterResult = CurrencyConverter.INSTANCE.parseToBTCNotLocalised(amount);
                     if (converterResult.isBtcMoneyValid()) {
-                        bitcoinURI = BitcoinURI.convertToBitcoinURI(decodeAddress, converterResult.getBtcMoney().getAmount().toBigInteger(), label, null);
+                        bitcoinURI = FastcoinURI.convertToFastcoinURI(decodeAddress, converterResult.getBtcMoney().getAmount().toBigInteger(), label, null);
                     } else {
                        // No parsable amount - show nothing.  
                     }                } else {
-                    bitcoinURI = BitcoinURI.convertToBitcoinURI(decodeAddress, null, label, null);
+                    bitcoinURI = FastcoinURI.convertToFastcoinURI(decodeAddress, null, label, null);
                 }
             }
             this.bitcoinController.getModel().setActiveWalletPreference(BitcoinModel.SEND_PERFORM_PASTE_NOW, "false");

@@ -15,11 +15,11 @@
  */
 package org.multibit.viewsystem.swing;
 
-import com.google.bitcoin.core.ECKey;
-import com.google.bitcoin.core.Sha256Hash;
-import com.google.bitcoin.core.Transaction;
-import com.google.bitcoin.core.Wallet;
-import org.bitcoinj.wallet.Protos.Wallet.EncryptionType;
+import com.google.fastcoin.core.ECKey;
+import com.google.fastcoin.core.Sha256Hash;
+import com.google.fastcoin.core.Transaction;
+import com.google.fastcoin.core.Wallet;
+import org.fastcoinj.wallet.Protos.Wallet.EncryptionType;
 import org.joda.money.Money;
 import org.multibit.Localiser;
 import org.multibit.controller.Controller;

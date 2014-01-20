@@ -15,9 +15,9 @@
  */
 package org.multibit.controller.bitcoin;
 
-import com.google.bitcoin.core.*;
-import com.google.bitcoin.uri.BitcoinURI;
-import com.google.bitcoin.uri.BitcoinURIParseException;
+import com.google.fastcoin.core.*;
+import com.google.fastcoin.uri.FastcoinURI;
+import com.google.fastcoin.uri.FastcoinURIParseException;
 import org.multibit.controller.AbstractController;
 import org.multibit.controller.AbstractEventHandler;
 import org.multibit.controller.core.CoreController;
@@ -225,11 +225,17 @@ public class BitcoinController extends AbstractController<CoreController> implem
             viewSystem.onTransactionConfidenceChanged(wallet, transaction);
         }
     }
-    
+
+    @Override
+    public void onKeyAdded(ECKey key) {
+        log.debug("Key added : " + key.toString());
+    }
+    /*
     @Override
     public void onKeysAdded(Wallet wallet, List<ECKey> keys) {
         log.debug("Keys added : " + keys.toString());
     }
+    */
 
     @Override
     public void onReorganize(Wallet wallet) {
@@ -294,10 +300,10 @@ public class BitcoinController extends AbstractController<CoreController> implem
         // have illegal embedded spaces - convert to ENCODED_SPACE_CHARACTER i.e
         // be lenient
         String uriString = rawBitcoinURIString.replace(" ", ENCODED_SPACE_CHARACTER);
-        BitcoinURI bitcoinURI;
+        FastcoinURI bitcoinURI;
         try {
-            bitcoinURI = new BitcoinURI(getModel().getNetworkParameters(), uriString);
-        } catch (BitcoinURIParseException pe) {
+            bitcoinURI = new FastcoinURI(getModel().getNetworkParameters(), uriString);
+        } catch (FastcoinURIParseException pe) {
             log.error("Could not parse the uriString '" + uriString + "', aborting");
             return;
         }
@@ -378,7 +384,9 @@ public class BitcoinController extends AbstractController<CoreController> implem
     public void onConfidenceChanged(Transaction tx) {
     }
 
+    /*
     @Override
     public void onConfidenceChanged(Transaction tx, ChangeReason reason) {
     }
+    */
 }

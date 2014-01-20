@@ -15,15 +15,16 @@
  */
 package org.multibit.network;
 
-import com.google.bitcoin.core.*;
-import com.google.bitcoin.core.Wallet.SendRequest;
-import com.google.bitcoin.crypto.KeyCrypterException;
-import com.google.bitcoin.discovery.DnsDiscovery;
-import com.google.bitcoin.discovery.IrcDiscovery;
-import com.google.bitcoin.store.BlockStore;
-import com.google.bitcoin.store.BlockStoreException;
-import com.google.bitcoin.store.SPVBlockStore;
-import org.bitcoinj.wallet.Protos.Wallet.EncryptionType;
+import com.google.fastcoin.core.MultiBitBlockChain;
+import com.google.fastcoin.core.*;
+import com.google.fastcoin.core.Wallet.SendRequest;
+import com.google.fastcoin.crypto.KeyCrypterException;
+import com.google.fastcoin.discovery.DnsDiscovery;
+import com.google.fastcoin.discovery.IrcDiscovery;
+import com.google.fastcoin.store.BlockStore;
+import com.google.fastcoin.store.BlockStoreException;
+import com.google.fastcoin.store.SPVBlockStore;
+import org.fastcoinj.wallet.Protos.Wallet.EncryptionType;
 import org.multibit.ApplicationDataDirectoryLocator;
 import org.multibit.MultiBit;
 import org.multibit.controller.Controller;
@@ -342,13 +343,15 @@ public class MultiBitService {
 
         if (!peersSpecified) {
             // Use DNS for production, IRC for test.
+            peerGroup.addPeerDiscovery(new IrcDiscovery("#fastcoin00"));
+            /*
             if (TESTNET3_GENESIS_HASH.equals(bitcoinController.getModel().getNetworkParameters().getGenesisBlock().getHashAsString())) {
                 peerGroup.addPeerDiscovery(new IrcDiscovery(IRC_CHANNEL_TESTNET3));
             } else if (NetworkParameters.testNet().equals(bitcoinController.getModel().getNetworkParameters())) {
                 peerGroup.addPeerDiscovery(new IrcDiscovery(IRC_CHANNEL_TEST));
             } else {
                 peerGroup.addPeerDiscovery(new DnsDiscovery(networkParameters));
-            }
+            } */
         }
         // Add the controller as a PeerEventListener.
         peerGroup.addEventListener(bitcoinController.getPeerEventListener());
@@ -372,6 +375,7 @@ public class MultiBitService {
 
     public static String getFilePrefix() {
         BitcoinController bitcoinController = MultiBit.getBitcoinController();
+        /*
         // testnet3
         if (TESTNET3_GENESIS_HASH.equals(bitcoinController.getModel().getNetworkParameters().getGenesisBlock().getHashAsString())) {
             return MULTIBIT_PREFIX + SEPARATOR + TESTNET3_PREFIX;
@@ -380,6 +384,8 @@ public class MultiBitService {
         } else {
             return MULTIBIT_PREFIX;
         }
+        */
+        return MULTIBIT_PREFIX;
     }
 
     /**
@@ -465,7 +471,7 @@ public class MultiBitService {
         if (wallet != null) {
             // Add the keys for this wallet to the address book as receiving
             // addresses.
-            List<ECKey> keys = wallet.getKeychain();
+            List<ECKey> keys = wallet.keychain;// getKeychain();
             if (keys != null) {
                 if (!newWalletCreated) {
                     perWalletModelDataToReturn = bitcoinController.getModel().getPerWalletModelDataByWalletFilename(walletFilename);
@@ -589,7 +595,7 @@ public class MultiBitService {
         }
         sendRequest.aesKey = aesKey;
         sendRequest.fee = BigInteger.ZERO;
-        sendRequest.feePerKb = BitcoinModel.SEND_FEE_PER_KB_DEFAULT;
+        //sendRequest.feePerKb = BitcoinModel.SEND_FEE_PER_KB_DEFAULT;
         
         sendRequest.tx.getConfidence().addEventListener(perWalletModelData.getWallet().getTxConfidenceListener());
         // log.debug("Added txConfidenceListener " + txConfidenceListener + " to tx " + request.tx.getHashAsString() + ", identityHashCode = " + System.identityHashCode(request.tx));
@@ -607,7 +613,7 @@ public class MultiBitService {
             // method.
             peerGroup.broadcastTransaction(sendRequest.tx);
 
-            log.debug("Sending transaction '" + Utils.bytesToHexString(sendRequest.tx.bitcoinSerialize()) + "'");
+            log.debug("Sending transaction '" + Utils.bytesToHexString(sendRequest.tx.fastcoinSerialize()) + "'");
         } catch (VerificationException e1) {
             // TODO Auto-generated catch block
             e1.printStackTrace();

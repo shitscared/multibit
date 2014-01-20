@@ -67,11 +67,11 @@ import org.multibit.viewsystem.swing.view.walletlist.WalletListPanel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.google.bitcoin.core.StoredBlock;
-import com.google.bitcoin.core.Transaction;
-import com.google.bitcoin.core.TransactionConfidence;
-import com.google.bitcoin.core.Wallet;
-import com.google.bitcoin.crypto.KeyCrypterException;
+import com.google.fastcoin.core.StoredBlock;
+import com.google.fastcoin.core.Transaction;
+import com.google.fastcoin.core.TransactionConfidence;
+import com.google.fastcoin.core.Wallet;
+import com.google.fastcoin.crypto.KeyCrypterException;
 
 /**
  * This {@link Action} opens a wallet from a file.

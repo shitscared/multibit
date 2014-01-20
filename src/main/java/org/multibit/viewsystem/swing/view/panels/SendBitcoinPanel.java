@@ -62,9 +62,9 @@ import org.multibit.viewsystem.swing.view.components.MultiBitTextField;
 import org.multibit.viewsystem.swing.view.components.MultiBitTitledPanel;
 import org.multibit.viewsystem.swing.view.models.AddressBookTableModel;
 
-import com.google.bitcoin.core.Address;
-import com.google.bitcoin.core.AddressFormatException;
-import com.google.bitcoin.core.Utils;
+import com.google.fastcoin.core.Address;
+import com.google.fastcoin.core.AddressFormatException;
+import com.google.fastcoin.core.Utils;
 
 public class SendBitcoinPanel extends AbstractTradePanel implements Viewable {
 
@@ -408,7 +408,7 @@ public class SendBitcoinPanel extends AbstractTradePanel implements Viewable {
         if (Boolean.TRUE.toString().equalsIgnoreCase(performPasteNow)) {
             try {
                 Address decodeAddress = new Address(this.bitcoinController.getModel().getNetworkParameters(), address);
-                processDecodedString(com.google.bitcoin.uri.BitcoinURI.convertToBitcoinURI(decodeAddress, Utils.toNanoCoins(amountNotLocalised), label, null), null);
+                processDecodedString(com.google.fastcoin.uri.BitcoinURI.convertToBitcoinURI(decodeAddress, Utils.toNanoCoins(amountNotLocalised), label, null), null);
                 this.bitcoinController.getModel().setActiveWalletPreference(BitcoinModel.SEND_PERFORM_PASTE_NOW, "false");
                 sendButton.requestFocusInWindow();
 

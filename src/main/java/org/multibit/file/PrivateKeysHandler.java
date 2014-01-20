@@ -35,8 +35,8 @@ import java.util.Scanner;
 import java.util.Set;
 import java.util.TimeZone;
 
-import com.google.bitcoin.crypto.KeyCrypter;
-import com.google.bitcoin.crypto.KeyCrypterException;
+import com.google.fastcoin.crypto.KeyCrypter;
+import com.google.fastcoin.crypto.KeyCrypterException;
 
 import org.multibit.crypto.KeyCrypterOpenSSL;
 import org.multibit.utils.DateUtils;
@@ -44,21 +44,21 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.spongycastle.crypto.params.KeyParameter;
 
-import com.google.bitcoin.core.AddressFormatException;
-import com.google.bitcoin.core.Block;
-import com.google.bitcoin.core.BlockChain;
-import com.google.bitcoin.core.DumpedPrivateKey;
-import com.google.bitcoin.core.ECKey;
-import com.google.bitcoin.core.NetworkParameters;
-import com.google.bitcoin.core.ScriptException;
-import com.google.bitcoin.core.StoredBlock;
-import com.google.bitcoin.core.Transaction;
-import com.google.bitcoin.core.TransactionInput;
-import com.google.bitcoin.core.TransactionOutput;
-import com.google.bitcoin.core.Utils;
-import com.google.bitcoin.core.Wallet;
+import com.google.fastcoin.core.AddressFormatException;
+import com.google.fastcoin.core.Block;
+import com.google.fastcoin.core.BlockChain;
+import com.google.fastcoin.core.DumpedPrivateKey;
+import com.google.fastcoin.core.ECKey;
+import com.google.fastcoin.core.NetworkParameters;
+import com.google.fastcoin.core.ScriptException;
+import com.google.fastcoin.core.StoredBlock;
+import com.google.fastcoin.core.Transaction;
+import com.google.fastcoin.core.TransactionInput;
+import com.google.fastcoin.core.TransactionOutput;
+import com.google.fastcoin.core.Utils;
+import com.google.fastcoin.core.Wallet;
 
-import org.bitcoinj.wallet.Protos.Wallet.EncryptionType;
+import org.fastcoinj.wallet.Protos.Wallet.EncryptionType;
 
 /**
  * Class for handling reading and writing of private keys to a file.

@@ -15,8 +15,8 @@
  */
 package org.multibit.viewsystem.swing.action;
 
-import com.google.bitcoin.core.*;
-import com.google.bitcoin.crypto.KeyCrypterException;
+import com.google.fastcoin.core.*;
+import com.google.fastcoin.crypto.KeyCrypterException;
 import org.multibit.controller.bitcoin.BitcoinController;
 import org.multibit.model.bitcoin.WalletBusyListener;
 import org.multibit.utils.WhitespaceTrimmer;

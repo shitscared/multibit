@@ -18,9 +18,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.bitcoinj.wallet.Protos;
-import org.bitcoinj.wallet.Protos.ScryptParameters;
-import org.bitcoinj.wallet.Protos.Wallet.EncryptionType;
+import org.fastcoinj.wallet.Protos;
+import org.fastcoinj.wallet.Protos.ScryptParameters;
+import org.fastcoinj.wallet.Protos.Wallet.EncryptionType;
 import org.multibit.model.bitcoin.BitcoinModel;
 import org.multibit.model.bitcoin.WalletData;
 import org.multibit.model.bitcoin.WalletInfoData;
@@ -28,12 +28,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.spongycastle.util.Arrays;
 
-import com.google.bitcoin.core.Utils;
-import com.google.bitcoin.core.Wallet;
-import com.google.bitcoin.crypto.EncryptedPrivateKey;
-import com.google.bitcoin.crypto.KeyCrypter;
-import com.google.bitcoin.crypto.KeyCrypterException;
-import com.google.bitcoin.crypto.KeyCrypterScrypt;
+import com.google.fastcoin.core.Utils;
+import com.google.fastcoin.core.Wallet;
+import com.google.fastcoin.crypto.EncryptedPrivateKey;
+import com.google.fastcoin.crypto.KeyCrypter;
+import com.google.fastcoin.crypto.KeyCrypterException;
+import com.google.fastcoin.crypto.KeyCrypterScrypt;
 import com.google.protobuf.ByteString;
 
 

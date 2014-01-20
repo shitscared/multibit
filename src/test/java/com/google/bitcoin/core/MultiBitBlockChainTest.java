@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package com.google.bitcoin.core;
+package com.google.fastcoin.core;
 
-import com.google.bitcoin.core.Wallet.BalanceType;
-import com.google.bitcoin.store.BlockStore;
-import com.google.bitcoin.store.MemoryBlockStore;
-import com.google.bitcoin.utils.BriefLogFormatter;
+import com.google.fastcoin.core.Wallet.BalanceType;
+import com.google.fastcoin.store.BlockStore;
+import com.google.fastcoin.store.MemoryBlockStore;
+import com.google.fastcoin.utils.BriefLogFormatter;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.math.BigInteger;
 
-import static com.google.bitcoin.core.CoreTestUtils.createFakeBlock;
-import static com.google.bitcoin.core.CoreTestUtils.createFakeTx;
+import static com.google.fastcoin.core.CoreTestUtils.createFakeBlock;
+import static com.google.fastcoin.core.CoreTestUtils.createFakeTx;
 import static org.junit.Assert.*;
 
 // Handling of chain splits/reorgs are in ChainSplitTests.

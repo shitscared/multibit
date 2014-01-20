@@ -15,10 +15,10 @@
  */
 package org.multibit.viewsystem.swing.action;
 
-import com.google.bitcoin.core.Address;
-import com.google.bitcoin.core.AddressFormatException;
-import com.google.bitcoin.core.ECKey;
-import com.google.bitcoin.core.WrongNetworkException;
+import com.google.fastcoin.core.Address;
+import com.google.fastcoin.core.AddressFormatException;
+import com.google.fastcoin.core.ECKey;
+import com.google.fastcoin.core.WrongNetworkException;
 import org.multibit.controller.bitcoin.BitcoinController;
 import org.multibit.model.bitcoin.WalletBusyListener;
 import org.multibit.utils.WhitespaceTrimmer;

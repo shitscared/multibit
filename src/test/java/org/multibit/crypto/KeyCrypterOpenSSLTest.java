@@ -15,8 +15,8 @@
  */
 package org.multibit.crypto;
 
-import com.google.bitcoin.core.Utils;
-import com.google.bitcoin.crypto.KeyCrypterException;
+import com.google.fastcoin.core.Utils;
+import com.google.fastcoin.crypto.KeyCrypterException;
 import junit.framework.TestCase;
 import org.junit.Test;
 import org.slf4j.Logger;

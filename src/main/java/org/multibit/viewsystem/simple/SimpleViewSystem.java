@@ -8,9 +8,9 @@ import org.multibit.model.core.StatusEnum;
 import org.multibit.viewsystem.DisplayHint;
 import org.multibit.viewsystem.ViewSystem;
 
-import com.google.bitcoin.core.ECKey;
-import com.google.bitcoin.core.Transaction;
-import com.google.bitcoin.core.Wallet;
+import com.google.fastcoin.core.ECKey;
+import com.google.fastcoin.core.Transaction;
+import com.google.fastcoin.core.Wallet;
 import org.multibit.viewsystem.View;
 
 /**

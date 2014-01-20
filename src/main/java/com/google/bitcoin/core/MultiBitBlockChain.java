@@ -13,14 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.bitcoin.core;
+package com.google.fastcoin.core;
 
 import java.io.File;
 import java.util.List;
 
-import com.google.bitcoin.store.BlockStore;
-import com.google.bitcoin.store.BlockStoreException;
-import com.google.bitcoin.store.SPVBlockStore;
+import com.google.fastcoin.core.*;
+import com.google.fastcoin.store.BlockStore;
+import com.google.fastcoin.store.BlockStoreException;
+import com.google.fastcoin.store.SPVBlockStore;
 
 /**
  * Extension of bitcoinj BlockChain for use with block chain replay.
@@ -56,5 +57,15 @@ public class MultiBitBlockChain extends BlockChain {
             blockStore.setChainHead(chainHead);
             super.setChainHead(chainHead);
         }
+    }
+
+    /**
+     * Returns the block at the head of the current best chain. This is the block which represents the greatest
+     * amount of cumulative work done.
+     */
+    public StoredBlock getChainHead() {
+
+            return chainHead;
+
     }
 }

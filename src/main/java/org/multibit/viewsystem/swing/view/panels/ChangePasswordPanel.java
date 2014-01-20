@@ -52,7 +52,7 @@ import org.multibit.viewsystem.swing.view.components.MultiBitButton;
 import org.multibit.viewsystem.swing.view.components.MultiBitLabel;
 import org.multibit.viewsystem.swing.view.components.MultiBitTitledPanel;
 
-import org.bitcoinj.wallet.Protos.Wallet.EncryptionType;
+import org.fastcoinj.wallet.Protos.Wallet.EncryptionType;
 
 
 /**

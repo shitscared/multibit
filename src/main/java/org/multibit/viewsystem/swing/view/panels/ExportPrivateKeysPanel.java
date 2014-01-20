@@ -15,7 +15,7 @@
  */
 package org.multibit.viewsystem.swing.view.panels;
 
-import org.bitcoinj.wallet.Protos.Wallet.EncryptionType;
+import org.fastcoinj.wallet.Protos.Wallet.EncryptionType;
 import org.multibit.controller.Controller;
 import org.multibit.controller.bitcoin.BitcoinController;
 import org.multibit.model.bitcoin.BitcoinModel;

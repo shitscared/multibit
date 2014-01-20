@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.google.bitcoin.core;
+package com.google.fastcoin.core;
 
 import java.math.BigInteger;
 
-import com.google.bitcoin.store.BlockStore;
-import com.google.bitcoin.store.BlockStoreException;
+import com.google.fastcoin.store.BlockStore;
+import com.google.fastcoin.store.BlockStoreException;
 
 /**
  * This is the bitcoinj TestUtils but renamed as jenkins was complaining there are no tests in it

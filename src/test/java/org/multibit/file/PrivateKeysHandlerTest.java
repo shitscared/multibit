@@ -17,9 +17,9 @@ package org.multibit.file;
 
 
 
-import com.google.bitcoin.core.ECKey;
-import com.google.bitcoin.core.NetworkParameters;
-import com.google.bitcoin.core.Wallet;
+import com.google.fastcoin.core.ECKey;
+import com.google.fastcoin.core.NetworkParameters;
+import com.google.fastcoin.core.Wallet;
 import com.piuk.blockchain.MyWallet;
 import junit.framework.TestCase;
 import org.junit.Test;

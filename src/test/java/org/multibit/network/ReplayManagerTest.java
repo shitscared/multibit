@@ -41,11 +41,11 @@ import org.multibit.viewsystem.simple.SimpleViewSystem;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.google.bitcoin.core.DumpedPrivateKey;
-import com.google.bitcoin.core.ECKey;
-import com.google.bitcoin.core.NetworkParameters;
-import com.google.bitcoin.core.Wallet;
-import com.google.bitcoin.core.Wallet.BalanceType;
+import com.google.fastcoin.core.DumpedPrivateKey;
+import com.google.fastcoin.core.ECKey;
+import com.google.fastcoin.core.NetworkParameters;
+import com.google.fastcoin.core.Wallet;
+import com.google.fastcoin.core.Wallet.BalanceType;
 
 public class ReplayManagerTest extends TestCase {
     private static final Logger log = LoggerFactory.getLogger(ReplayManagerTest.class);

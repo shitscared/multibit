@@ -15,12 +15,12 @@
  */
 package org.multibit.viewsystem.swing.action;
 
-import com.google.bitcoin.core.Address;
-import com.google.bitcoin.core.AddressFormatException;
-import com.google.bitcoin.core.Utils;
-import com.google.bitcoin.core.Wallet.SendRequest;
-import com.google.bitcoin.core.WrongNetworkException;
-import com.google.bitcoin.crypto.KeyCrypterException;
+import com.google.fastcoin.core.Address;
+import com.google.fastcoin.core.AddressFormatException;
+import com.google.fastcoin.core.Utils;
+import com.google.fastcoin.core.Wallet.SendRequest;
+import com.google.fastcoin.core.WrongNetworkException;
+import com.google.fastcoin.crypto.KeyCrypterException;
 import org.multibit.controller.bitcoin.BitcoinController;
 import org.multibit.message.Message;
 import org.multibit.message.MessageManager;

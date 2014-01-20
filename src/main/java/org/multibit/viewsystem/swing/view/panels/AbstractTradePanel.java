@@ -15,9 +15,9 @@
  */
 package org.multibit.viewsystem.swing.view.panels;
 
-import com.google.bitcoin.core.Address;
-import com.google.bitcoin.uri.BitcoinURI;
-import com.google.bitcoin.uri.BitcoinURIParseException;
+import com.google.fastcoin.core.Address;
+import com.google.fastcoin.uri.FastcoinURI;
+import com.google.fastcoin.uri.FastcoinURIParseException;
 import org.joda.money.Money;
 import org.multibit.controller.Controller;
 import org.multibit.controller.bitcoin.BitcoinController;
@@ -1609,10 +1609,10 @@ public abstract class AbstractTradePanel extends JPanel implements Viewable, Cop
             // have illegal embedded spaces - convert to ENCODED_SPACE_CHARACTER
             // i.e be lenient
             String uriString = decodedString.replace(" ", BitcoinController.ENCODED_SPACE_CHARACTER);
-            BitcoinURI bitcoinURI;
+            FastcoinURI bitcoinURI;
             try {
-                bitcoinURI = new BitcoinURI(this.bitcoinController.getModel().getNetworkParameters(), uriString);
-            } catch (BitcoinURIParseException e) {
+                bitcoinURI = new FastcoinURI(this.bitcoinController.getModel().getNetworkParameters(), uriString);
+            } catch (FastcoinURIParseException e) {
                 Message message = new Message(e.getClass().getName() +  " " + e.getMessage());
                 MessageManager.INSTANCE.addMessage(message);
                 return false;

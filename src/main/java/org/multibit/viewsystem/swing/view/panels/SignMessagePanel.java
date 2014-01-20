@@ -37,7 +37,7 @@ import javax.swing.SwingConstants;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
-import org.bitcoinj.wallet.Protos.Wallet.EncryptionType;
+import org.fastcoinj.wallet.Protos.Wallet.EncryptionType;
 import org.multibit.controller.Controller;
 import org.multibit.controller.bitcoin.BitcoinController;
 import org.multibit.model.bitcoin.WalletBusyListener;

@@ -15,8 +15,9 @@
  */
 package org.multibit;
 
-import com.google.bitcoin.core.StoredBlock;
-import com.google.bitcoin.core.Wallet;
+import com.google.fastcoin.core.StoredBlock;
+import com.google.fastcoin.core.Wallet;
+import com.google.fastcoin.store.SPVBlockStore;
 import org.multibit.controller.Controller;
 import org.multibit.controller.bitcoin.BitcoinController;
 import org.multibit.controller.core.CoreController;
@@ -37,7 +38,7 @@ import org.multibit.platform.GenericApplication;
 import org.multibit.platform.GenericApplicationFactory;
 import org.multibit.platform.GenericApplicationSpecification;
 import org.multibit.platform.listener.GenericOpenURIEvent;
-import org.multibit.store.WalletVersionException;
+//import org.multibit.store.WalletVersionException;
 import org.multibit.viewsystem.DisplayHint;
 import org.multibit.viewsystem.ViewSystem;
 import org.multibit.viewsystem.swing.ColorAndFontConstants;
@@ -316,12 +317,14 @@ public final class MultiBit {
                     MessageManager.INSTANCE.addMessage(new Message(message));
                     log.error(message);
                     thereWasAnErrorLoadingTheWallet = true;
+                /*
                 } catch (WalletVersionException e) {
                     String message = controller.getLocaliser().getString("openWalletSubmitAction.walletNotLoaded",
                             new Object[] { activeWalletFilename, e.getMessage() });
                     MessageManager.INSTANCE.addMessage(new Message(message));
                     log.error(message);
                     thereWasAnErrorLoadingTheWallet = true;
+                    */
                 } catch (IOException e) {
                     String message = controller.getLocaliser().getString("openWalletSubmitAction.walletNotLoaded",
                             new Object[] { activeWalletFilename, e.getMessage() });
@@ -469,12 +472,14 @@ public final class MultiBit {
                                 MessageManager.INSTANCE.addMessage(message);
                                 log.error(message.getText());
                                 thereWasAnErrorLoadingTheWallet = true;
+                                /*
                             } catch (WalletVersionException e) {
                                 message = new Message(controller.getLocaliser().getString("openWalletSubmitAction.walletNotLoaded",
                                         new Object[] { actualOrder, e.getMessage() }));
                                 MessageManager.INSTANCE.addMessage(message);
                                 log.error(message.getText());
                                 thereWasAnErrorLoadingTheWallet = true;
+                                */
                             } catch (IOException e) {
                                 message = new Message(controller.getLocaliser().getString("openWalletSubmitAction.walletNotLoaded",
                                         new Object[] { actualOrder, e.getMessage() }));
@@ -544,12 +549,15 @@ public final class MultiBit {
             // Work out the late date/ block the wallets saw to see if it needs syncing
             // or if we can use regular downloading.
             int currentChainHeight = -1;
+
+            /*
             if (bitcoinController.getMultiBitService().getChain() != null) {
                 if (bitcoinController.getMultiBitService().getChain().getChainHead() != null) {
                     currentChainHeight = bitcoinController.getMultiBitService().getChain().getChainHead().getHeight();
                 }
             }
-            
+              */
+
             log.debug("The current chain height is " + currentChainHeight);
             
             List<WalletData> perWalletModelDataList = bitcoinController.getModel().getPerWalletModelDataList();

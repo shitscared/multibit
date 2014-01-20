@@ -26,7 +26,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.SwingWorker;
 
-import org.bitcoinj.wallet.Protos.Wallet.EncryptionType;
+import org.fastcoinj.wallet.Protos.Wallet.EncryptionType;
 import org.multibit.controller.Controller;
 import org.multibit.controller.bitcoin.BitcoinController;
 import org.multibit.file.PrivateKeysHandler;
@@ -40,8 +40,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.spongycastle.util.Arrays;
 
-import com.google.bitcoin.core.MultiBitBlockChain;
-import com.google.bitcoin.crypto.KeyCrypterException;
+import com.google.fastcoin.core.MultiBitBlockChain;
+import com.google.fastcoin.crypto.KeyCrypterException;
 
 /**
  * This {@link Action} exports the active wallets private keys.

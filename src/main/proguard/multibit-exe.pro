@@ -102,17 +102,17 @@
 -keep public class com.piuk.blockchain.**
 -keep class com.piuk.blockchain.**
 
--keep public class com.google.bitcoin.**
+-keep public class com.google.fastcoin.**
 {
  *;
 }
--keep class com.google.bitcoin.**
+-keep class com.google.fastcoin.**
 {
  *;
 }
 
 -keep public class org.bitcoin.**
--keep public class org.bitcoinj.**
+-keep public class org.fastcoinj.**
 -keep public class org.simplericity.macify.**
 -keep public class sun.misc.Cleaner
 -keep public class ch.qos.**
@@ -153,9 +153,9 @@
 -keep public interface com.xeiam.xchange.**
 -keep public interface org.multibit.**
 -keep public interface com.piuk.blockchain.**
--keep public interface com.google.bitcoin.**
+-keep public interface com.google.fastcoin.**
 -keep public interface org.bitcoin.**
--keep public interface org.bitcoinj.**
+-keep public interface org.fastcoinj.**
 -keep public interface org.simplericity.macify.**
 -keep public interface si.mazi.**
 -keep public interface javax.ws.**

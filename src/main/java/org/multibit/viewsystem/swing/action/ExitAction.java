@@ -38,8 +38,8 @@ import org.multibit.viewsystem.swing.MultiBitFrame;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.google.bitcoin.store.BlockStore;
-import com.google.bitcoin.store.BlockStoreException;
+import com.google.fastcoin.store.BlockStore;
+import com.google.fastcoin.store.BlockStoreException;
 
 /**
  * Exit the application.

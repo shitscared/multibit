@@ -15,8 +15,8 @@
  */
 package org.multibit.viewsystem.swing.view.walletlist;
 
-import com.google.bitcoin.core.Wallet.BalanceType;
-import org.bitcoinj.wallet.Protos.Wallet.EncryptionType;
+import com.google.fastcoin.core.Wallet.BalanceType;
+import org.fastcoinj.wallet.Protos.Wallet.EncryptionType;
 import org.joda.money.Money;
 import org.multibit.controller.Controller;
 import org.multibit.controller.bitcoin.BitcoinController;

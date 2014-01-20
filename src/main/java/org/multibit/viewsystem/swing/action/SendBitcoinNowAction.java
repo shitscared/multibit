@@ -24,7 +24,7 @@ import javax.swing.Action;
 import javax.swing.ImageIcon;
 import javax.swing.JPasswordField;
 
-import org.bitcoinj.wallet.Protos.Wallet.EncryptionType;
+import org.fastcoinj.wallet.Protos.Wallet.EncryptionType;
 import org.multibit.controller.Controller;
 import org.multibit.controller.bitcoin.BitcoinController;
 import org.multibit.file.WalletSaveException;
@@ -40,10 +40,10 @@ import org.multibit.viewsystem.swing.view.panels.SendBitcoinConfirmPanel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.google.bitcoin.core.AddressFormatException;
-import com.google.bitcoin.core.Transaction;
-import com.google.bitcoin.core.Wallet.SendRequest;
-import com.google.bitcoin.crypto.KeyCrypterException;
+import com.google.fastcoin.core.AddressFormatException;
+import com.google.fastcoin.core.Transaction;
+import com.google.fastcoin.core.Wallet.SendRequest;
+import com.google.fastcoin.crypto.KeyCrypterException;
 
 /**
  * This {@link Action} actually spends bitcoin.

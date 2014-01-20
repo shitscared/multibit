@@ -15,10 +15,10 @@
  */
 package org.multibit.viewsystem.swing.action;
 
-import com.google.bitcoin.core.ECKey;
-import com.google.bitcoin.crypto.KeyCrypter;
-import com.google.bitcoin.crypto.KeyCrypterException;
-import org.bitcoinj.wallet.Protos.Wallet.EncryptionType;
+import com.google.fastcoin.core.ECKey;
+import com.google.fastcoin.crypto.KeyCrypter;
+import com.google.fastcoin.crypto.KeyCrypterException;
+import org.fastcoinj.wallet.Protos.Wallet.EncryptionType;
 import org.multibit.controller.bitcoin.BitcoinController;
 import org.multibit.file.BackupManager;
 import org.multibit.file.FileHandler;

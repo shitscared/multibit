@@ -32,8 +32,8 @@ import org.spongycastle.crypto.modes.CBCBlockCipher;
 import org.spongycastle.crypto.paddings.PaddedBufferedBlockCipher;
 import org.spongycastle.crypto.params.ParametersWithIV;
 
-import com.google.bitcoin.core.Utils;
-import com.google.bitcoin.crypto.KeyCrypterException;
+import com.google.fastcoin.core.Utils;
+import com.google.fastcoin.crypto.KeyCrypterException;
 import com.google.common.base.Preconditions;
 
 /**

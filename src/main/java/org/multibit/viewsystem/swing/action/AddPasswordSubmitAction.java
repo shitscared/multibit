@@ -25,8 +25,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JPasswordField;
 import javax.swing.SwingUtilities;
 
-import org.bitcoinj.wallet.Protos;
-import org.bitcoinj.wallet.Protos.ScryptParameters;
+import org.fastcoinj.wallet.Protos;
+import org.fastcoinj.wallet.Protos.ScryptParameters;
 import org.multibit.controller.Controller;
 import org.multibit.controller.bitcoin.BitcoinController;
 import org.multibit.file.BackupManager;
@@ -40,10 +40,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.spongycastle.util.Arrays;
 
-import com.google.bitcoin.core.Wallet;
-import com.google.bitcoin.crypto.KeyCrypter;
-import com.google.bitcoin.crypto.KeyCrypterException;
-import com.google.bitcoin.crypto.KeyCrypterScrypt;
+import com.google.fastcoin.core.Wallet;
+import com.google.fastcoin.crypto.KeyCrypter;
+import com.google.fastcoin.crypto.KeyCrypterException;
+import com.google.fastcoin.crypto.KeyCrypterScrypt;
 import com.google.protobuf.ByteString;
 
 /**

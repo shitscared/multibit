@@ -16,10 +16,10 @@
 
 package org.multibit.network;
 
-import com.google.bitcoin.core.CheckpointManager;
-import com.google.bitcoin.core.PeerGroup;
-import com.google.bitcoin.core.StoredBlock;
-import com.google.bitcoin.store.BlockStoreException;
+import com.google.fastcoin.core.CheckpointManager;
+import com.google.fastcoin.core.PeerGroup;
+import com.google.fastcoin.core.StoredBlock;
+import com.google.fastcoin.store.BlockStoreException;
 import org.multibit.controller.bitcoin.BitcoinController;
 import org.multibit.message.Message;
 import org.multibit.message.MessageManager;
