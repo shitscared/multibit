@@ -1,5 +1,5 @@
 /**
- * Copyright 2011 multibit.org
+ * Copyright 2011 wallet.org
  *
  * Licensed under the MIT license (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@ package com.piuk.blockchain;
 
 import java.io.File;
 
-import org.multibit.model.bitcoin.BitcoinModel;
+import org.wallet.model.fastcoin.FastcoinModel;
 
 public class MyWalletPlainKeyFileFilter extends javax.swing.filechooser.FileFilter {
 
@@ -25,15 +25,15 @@ public class MyWalletPlainKeyFileFilter extends javax.swing.filechooser.FileFilt
     
     @Override
     public boolean accept(File file) {
-        return (file.getName().toLowerCase().endsWith(BitcoinModel.BLOCKCHAIN_WALLET_PLAIN_SUFFIX) && !file.getName().toLowerCase().endsWith(BitcoinModel.BLOCKCHAIN_WALLET_ENCRYPTED_SUFFIX));
+        return (file.getName().toLowerCase().endsWith(FastcoinModel.BLOCKCHAIN_WALLET_PLAIN_SUFFIX) && !file.getName().toLowerCase().endsWith(FastcoinModel.BLOCKCHAIN_WALLET_ENCRYPTED_SUFFIX));
     }
 
     @Override
     public String getDescription() {
-        String multiBitText = "";
+        String fastcoinWalletText = "";
         
-        multiBitText += "Blockchain.info " + " (*." + BitcoinModel.BLOCKCHAIN_WALLET_PLAIN_SUFFIX + ")";
+        fastcoinWalletText += "Blockchain.info " + " (*." + FastcoinModel.BLOCKCHAIN_WALLET_PLAIN_SUFFIX + ")";
 
-         return multiBitText;
+         return fastcoinWalletText;
     }
 }
