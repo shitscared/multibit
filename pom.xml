@@ -61,13 +61,7 @@
             <snapshots/>
             <url>https://oss.sonatype.org/content/groups/public</url>
         </repository>
-        <!-- bitcoin-j repo -->
-        <repository>
-            <id>bitcoinj-release</id>
-            <releases />
-            <url>http://distribution.bitcoinj.googlecode.com/git/releases</url>
-        </repository>
-        <!-- zxing repo -->
+	<!-- zxing repo -->
         <repository>
             <id>mvn-adamgent</id>
             <url>http://mvn-adamgent.googlecode.com/svn/maven/release</url>
@@ -675,9 +669,15 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
+            <groupId>de.sciss</groupId>
+            <artifactId>weblaf</artifactId>
+            <version>1.27</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
             <groupId>com.google</groupId>
-            <artifactId>bitcoinj</artifactId>
-            <version>${bitcoinj.version}</version>
+            <artifactId>fastcoinj</artifactId>
+            <version>0.11-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
          <dependency>
@@ -811,7 +811,7 @@
         </staging.linux.dir>
 
         <!-- Version of BitCoinJ to use (multiple uses) -->
-        <bitcoinj.version>0.10.2-MB-ALICE</bitcoinj.version>
+        <bitcoinj.version>0.11-SNAPSHOT</bitcoinj.version>
 
         <!-- Version of XChange to use (multiple uses) -->
         <xchange.version>1.10.0</xchange.version>
