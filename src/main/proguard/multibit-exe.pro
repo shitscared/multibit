@@ -9,6 +9,7 @@
 -injars  ../../../target/multibit-exe-full.jar
 -outjars ../../../target/multibit-exe.jar
 
+
 -libraryjars ../skeleton/mac/MultiBit.app/Contents/PlugIns/jdk1.7.0_25.jdk/Contents/Home/jre/lib/rt.jar
 -libraryjars ../skeleton/mac/MultiBit.app/Contents/PlugIns/jdk1.7.0_25.jdk/Contents/Home/jre/lib/alt-rt.jar
 -libraryjars ../skeleton/mac/MultiBit.app/Contents/PlugIns/jdk1.7.0_25.jdk/Contents/Home/jre/lib/charsets.jar
@@ -47,7 +48,7 @@
 #-printseeds out.seeds
 
 # Preserve the MultiBit app
--keep public class org.multibit.MultiBitWalletInExecutableJar {
+-keep public class org.multibit.MultiBitInExecutableJar {
     public static void main(java.lang.String[]);
 }
 
@@ -68,7 +69,7 @@
 # Explicitly preserve all serialization members. The Serializable interface
 # is only a marker interface, so it wouldn't save them.
 # You can comment this out if your application doesn't use serialization.
-# If your code contains serializable classes that have to be backward 
+# If your code contains serializable classes that have to be backward
 # compatible, please refer to the manual.
 
 -keepclassmembers class * implements java.io.Serializable {
@@ -80,7 +81,7 @@
     java.lang.Object readResolve();
 }
 
-# Your application may contain more items that need to be preserved; 
+# Your application may contain more items that need to be preserved;
 # typically classes that are dynamically created using Class.forName:
 -keep public class com.xeiam.xchange.**
 {
@@ -111,7 +112,7 @@
  *;
 }
 
--keep public class org.bitcoin.**
+-keep public class org.fastcoin.**
 -keep public class org.fastcoinj.**
 -keep public class org.simplericity.macify.**
 -keep public class sun.misc.Cleaner
@@ -148,14 +149,57 @@
 -keep public class org.spongycastle.crypto.**
 -keep public class org.spongycastle.math.**
 
+-keep public class com.alee.**
+{
+ *;
+}
+-keep class com.alee.**
+{
+ *;
+}
+-keep public class com.mortennobel.**
+{
+ *;
+}
+-keep class com.mortennobel.**
+{
+ *;
+}
+-keep public class com.thoughtworks.**
+{
+ *;
+}
+-keep class com.thoughtworks.**
+{
+ *;
+}
+-keep public class net.htmlparser.**
+{
+ *;
+}
+-keep class net.htmlparser.**
+{
+ *;
+}
+-keep public class org.xmlpull.**
+{
+ *;
+}
+-keep class org.xmlpull.**
+{
+ *;
+}
+
 -keep public interface org.slf4j.**
 -keep public interface org.xml.sax.**
 -keep public interface com.xeiam.xchange.**
 -keep public interface org.multibit.**
 -keep public interface com.piuk.blockchain.**
 -keep public interface com.google.fastcoin.**
--keep public interface org.bitcoin.**
+-keep public interface org.fastcoin.**
 -keep public interface org.fastcoinj.**
+-keep public interface org.bitcoin.**
+-keep public interface org.bitcoinj.**
 -keep public interface org.simplericity.macify.**
 -keep public interface si.mazi.**
 -keep public interface javax.ws.**
@@ -168,4 +212,8 @@
 -keep public interface com.google.protobuf.**
 -keep public interface com.google.zxing.qrcode.**
 -keep public interface org.jboss.netty.**
-
+-keep public interface com.alee.**
+-keep public interface com.mortennobel.**
+-keep public interface com.thoughtworks.**
+-keep public interface org.xmlpull.**
+-keep public interface net.htmlparser.**
