@@ -17,7 +17,7 @@ package com.piuk.blockchain;
 
 import java.io.File;
 
-import org.wallet.model.fastcoin.FastcoinModel;
+import org.multibit.model.fastcoin.FastcoinModel;
 
 public class MyWalletPlainKeyFileFilter extends javax.swing.filechooser.FileFilter {
 

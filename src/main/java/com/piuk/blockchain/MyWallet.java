@@ -59,12 +59,12 @@ public class MyWallet {
 
     public MyWallet(String base64Payload, String password) throws Exception {
         if (base64Payload == null || base64Payload.length() == 0 || password == null || password.length() == 0)
-            throw new Exception("Error Decrypting FastcoinWallet");
+            throw new Exception("Error Decrypting MultiBitWallet");
 
         String decrypted = decryptWallet(base64Payload, password);
 
         if (decrypted == null || decrypted.length() == 0)
-            throw new Exception("Error Decrypting FastcoinWallet");
+            throw new Exception("Error Decrypting MultiBitWallet");
 
         ObjectMapper mapper = new ObjectMapper(); // can reuse, share globally
 
@@ -76,7 +76,7 @@ public class MyWallet {
         }
 
         if (root == null)
-            throw new Exception("Error Decrypting FastcoinWallet");
+            throw new Exception("Error Decrypting MultiBitWallet");
 
         temporyPassword = password;
     }
@@ -85,7 +85,7 @@ public class MyWallet {
 		this.root = parsePlainPayload(base64Payload);
 
 		if (root == null)
-			throw new Exception("Error Decrypting FastcoinWallet");
+			throw new Exception("Error Decrypting MultiBitWallet");
 	}
 
 	public static byte[] concat(byte[] first, byte[] second) {
@@ -215,7 +215,7 @@ public class MyWallet {
             double version = Integer.valueOf(obj.get("version").toString());
 
             if (version != SupportedEncryptionVersion)
-                throw new Exception("FastcoinWallet version " + version + " not supported");
+                throw new Exception("MultiBitWallet version " + version + " not supported");
 
             String result = decrypt(payload, password, pbkdf2_iterations);
 

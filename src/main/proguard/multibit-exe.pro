@@ -47,7 +47,7 @@
 #-printseeds out.seeds
 
 # Preserve the MultiBit app
--keep public class org.wallet.FastcoinWalletInExecutableJar {
+-keep public class org.multibit.MultiBitWalletInExecutableJar {
     public static void main(java.lang.String[]);
 }
 
@@ -95,14 +95,6 @@
  *;
 }
 -keep class org.multibit.**
-{
- *;
-}
--keep public class org.wallet.**
-{
- *;
-}
--keep class org.wallet.**
 {
  *;
 }
@@ -160,7 +152,6 @@
 -keep public interface org.xml.sax.**
 -keep public interface com.xeiam.xchange.**
 -keep public interface org.multibit.**
--keep public interface org.wallet.**
 -keep public interface com.piuk.blockchain.**
 -keep public interface com.google.fastcoin.**
 -keep public interface org.bitcoin.**

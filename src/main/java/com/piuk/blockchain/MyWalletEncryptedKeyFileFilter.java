@@ -15,7 +15,7 @@
  */
 package com.piuk.blockchain;
 
-import org.wallet.model.fastcoin.FastcoinModel;
+import org.multibit.model.fastcoin.FastcoinModel;
 
 import java.io.File;
 
