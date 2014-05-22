@@ -33,7 +33,7 @@
 		<key>WorkingDirectory</key>
 		<string>$APP_PACKAGE/Contents/Resources/Java</string>
 		<key>MainClass</key>
-		<string>org.multibit.MultiBitInExecutableJar</string>
+		<string>org.multibit.MultiBitWalletInExecutableJar</string>
 		<key>JVMVersion</key>
 		<string>1.6+</string>
 		<key>ClassPath</key>
