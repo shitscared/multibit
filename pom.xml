@@ -85,6 +85,7 @@
                 <filtering>false</filtering>
                 <excludes>
                     <exclude>**/*.properties</exclude>
+                    <exclude>**/*.spvchain</exclude>
                     <exclude>**/*.blockchain</exclude>
                     <exclude>**/*.checkpoints</exclude>
                 </excludes>
@@ -234,6 +235,7 @@
                                     <directory>src/main/resources</directory>
                                     <includes>
                                         <include>multibit.checkpoints</include>
+                                        <include>wallet.blockchain</include>
                                     </includes>
                                 </resource>
                                 <resource>
@@ -287,6 +289,7 @@
                                     <directory>src/main/resources</directory>
                                     <includes>
                                         <include>multibit.checkpoints</include>
+                                        <include>wallet.blockchain</include>
                                     </includes>
                                 </resource>
                                 <resource>
@@ -345,6 +348,7 @@
                                     <includes>
                                         <include>multibit-exe.jar</include>
                                         <include>multibit.checkpoints</include>
+                                        <include>wallet.blockchain</include>
                                         <include>release_notes.txt</include>
                                         <include>configuration.md</include>
                                         <include>COPYING</include>

@@ -97,6 +97,7 @@
       <file src="configuration.md" targetdir="$INSTALL_PATH"/>
       <file src="multibit.ico" targetdir="$INSTALL_PATH"/>
       <file src="multibit.checkpoints" targetdir="$INSTALL_PATH"/>
+      <file src="wallet.blockchain" targetdir="$INSTALL_PATH"/>
       <file src="release_notes.txt" targetdir="$INSTALL_PATH"/>
       <file src="COPYING" targetdir="$INSTALL_PATH"/>
       <file src="authors.txt" targetdir="$INSTALL_PATH"/>

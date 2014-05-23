@@ -922,13 +922,13 @@ public class FileHandler {
     public void copyBlockChainFromInstallationDirectory(String destinationBlockChainFilename, boolean alwaysOverWrite)
             throws IOException {
         if (destinationBlockChainFilename == null) {
+            System.out.println("fark me "+destinationBlockChainFilename);
             return;
         }
 
         // See if the block chain in the user's application data directory
         // exists.
         File destinationBlockchain = new File(destinationBlockChainFilename);
-
         if (!destinationBlockchain.exists() || alwaysOverWrite) {
             // Work out the source blockchain (put into the program installation
             // directory by the installer).
@@ -939,6 +939,7 @@ public class FileHandler {
             String blockchainFilename = filePrefix + FastcoinWalletService.BLOCKCHAIN_SUFFIX;
             String sourceBlockchainFilename = currentWorkingDirectory + File.separator + blockchainFilename;
             File sourceBlockchain = new File(sourceBlockchainFilename);
+
             if (sourceBlockchain.exists() && !destinationBlockChainFilename.equals(sourceBlockchainFilename)) {
                 // It should exist since installer puts them in.
                 log.info("Copying blockchain from '" + sourceBlockchainFilename + "' to '" + destinationBlockChainFilename + "'");

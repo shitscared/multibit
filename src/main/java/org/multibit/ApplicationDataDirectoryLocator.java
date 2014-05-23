@@ -78,18 +78,18 @@ public class ApplicationDataDirectoryLocator {
             String operatingSystemName = System.getProperty("os.name");
             if (operatingSystemName != null && operatingSystemName.startsWith("Windows")) {
                 // Windows os
-                applicationDataDirectory = System.getenv("APPDATA") + File.separator + "MultiBitWallet";
+                applicationDataDirectory = System.getenv("APPDATA") + File.separator + "FastcoinMultiBitWallet";
             } else {
                 if (operatingSystemName != null && operatingSystemName.startsWith("Mac")) {
                     // Mac os
                     if ( (new File("../../../../" + FileHandler.USER_PROPERTIES_FILE_NAME)).exists()) {
                         applicationDataDirectory = new File("../../../..").getAbsolutePath();
                     } else {
-                        applicationDataDirectory = System.getProperty("user.home") + "/Library/Application Support/MultiBitWallet";
+                        applicationDataDirectory = System.getProperty("user.home") + "/Library/Application Support/FastcoinMultiBitWallet";
                     }
                 } else {
                     // treat as Linux/ unix variant
-                    applicationDataDirectory = System.getProperty("user.home") + "/MultiBitWallet";
+                    applicationDataDirectory = System.getProperty("user.home") + "/FastcoinMultiBitWallet";
                 }
             }
             

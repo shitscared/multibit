@@ -215,8 +215,7 @@ public class FastcoinWalletService {
               + filePrefix + CHECKPOINTS_SUFFIX;
     }
 
-    File blockStoreFile = new File(blockchainFilename);
-    boolean blockStoreCreatedNew = !blockStoreFile.exists();
+
 
     // Ensure there is a checkpoints file.
     File checkpointsFile = new File(checkpointsFilename);
@@ -241,6 +240,16 @@ public class FastcoinWalletService {
       log.debug("Using installed checkpoints file as it is longer than user data checkpoints - " + installedCheckpointsFile.length() + " bytes versus " + sizeOfUserDataCheckpointsFile + " bytes.");
     } else {
       log.debug("Using user data checkpoints file as it is longer/same size as installed checkpoints - " + sizeOfUserDataCheckpointsFile + " bytes versus " + installedCheckpointsFile.length() + " bytes.");
+    }
+
+    // Fastcoin-Mulitbit includes a preloaded/checkpointed ready to go spv blockchain.
+    File blockStoreFile = new File(blockchainFilename);
+    boolean blockStoreCreatedNew = !blockStoreFile.exists();
+    if (!blockStoreFile.exists()) {
+      fastcoinController.getFileHandler().copyBlockChainFromInstallationDirectory(blockchainFilename, true);
+      blockStoreFile = new File(blockchainFilename);
+      createNew=false;
+      blockStoreCreatedNew=false;
     }
 
     // If the spvBlockStore is to be created new
